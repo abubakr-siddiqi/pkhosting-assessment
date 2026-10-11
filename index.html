@@ -1,56 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PKHosting VPS Hosting</title>
-</head>
-<body>
-  <header>
-    <p><strong>PKHosting</strong></p>
-    <nav aria-label="Primary">
-      <a href="#plans">Plans</a>
-      <a href="#compare">Compare</a>
-      <a href="#faq">FAQ</a>
-      <a href="#plans">Get started</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PKHosting VPS Hosting</title>
+  </head>
+  <body>
+    <header>
+      <p><strong>PKHosting</strong></p>
+      <nav aria-label="Primary">
+        <a href="#plans">Plans</a>
+        <a href="#compare">Compare</a>
+        <a href="#faq">FAQ</a>
+        <a href="#plans">Get started</a>
+      </nav>
+    </header>
 
-  <main id="main">
+    <main id="main">
+      <section id="top" aria-labelledby="hero-title">
+        <p>PKHosting</p>
+        <h1 id="hero-title">VPS Hosting</h1>
+        <p>
+          Root access and clear pricing for teams that outgrew shared hosting.
+        </p>
+        <p>
+          <a href="#plans">View VPS plans</a>
+          <a href="#compare">Compare specs</a>
+        </p>
+      </section>
 
-    <section id="top" aria-labelledby="hero-title">
-      <p>PKHosting</p>
-      <h1 id="hero-title">VPS Hosting</h1>
-      <p>Root access and clear pricing for teams that outgrew shared hosting.</p>
-      <p>
-        <a href="#plans">View VPS plans</a>
-        <a href="#compare">Compare specs</a>
-      </p>
-    </section>
+      <section id="plans" aria-labelledby="plans-title">
+        <h2 id="plans-title">Choose a VPS plan</h2>
+        <p>
+          Four tiers with clear monthly pricing. Switch billing or currency
+          later with JavaScript.
+        </p>
 
-    <section id="plans" aria-labelledby="plans-title">
-      <h2 id="plans-title">Choose a VPS plan</h2>
-      <p>Four plans. Billing and currency controls come </p>
-      <p><em>Pricing cards</em></p>
-    </section>
+        <div role="group" aria-label="Pricing controls">
+          <div>
+            <span id="billing-label">Billing period</span>
+            <div role="radiogroup" aria-labelledby="billing-label">
+              <label>
+                <input type="radio" name="billing" value="monthly" checked />
+                Monthly
+              </label>
+              <label>
+                <input type="radio" name="billing" value="annually" />
+                Annually (2 months free)
+              </label>
+            </div>
+          </div>
 
-    <section id="compare" aria-labelledby="compare-title">
-      <h2 id="compare-title">Compare VPS plans</h2>
-      <p>Full comparison table</p>
-    </section>
+          <div>
+            <label for="currency">Currency</label>
+            <select id="currency" name="currency">
+              <option value="PKR" selected>PKR Pakistani Rupee</option>
+              <option value="USD">USD US Dollar</option>
+              <option value="GBP">GBP British Pound</option>
+            </select>
+          </div>
+        </div>
 
-    <section id="faq" aria-labelledby="faq-title">
-      <h2 id="faq-title">Frequently asked questions</h2>
-      <p>FAQ items</p>
-    </section>
+        <p id="price-live" aria-live="polite" aria-atomic="true"></p>
 
-  </main>
+        <div>
+          <article data-plan="starter" data-monthly-pkr="2400">
+            <h3>Starter</h3>
+            <p>Small apps and staging sites</p>
+            <p>
+              <span data-role="amount">Rs&nbsp;2,400</span>
+              <span data-role="period">/month</span>
+            </p>
+            <p data-role="meta" hidden></p>
+            <p data-role="savings" hidden></p>
+            <ul>
+              <li>1 vCPU</li>
+              <li>2 GB RAM</li>
+              <li>40 GB NVMe</li>
+              <li>2 TB transfer</li>
+            </ul>
+            <a href="#footer">Order Starter</a>
+          </article>
 
-  <footer id="footer">
-    <h2>Payment methods</h2>
-    <p>Payment list</p>
-    <p>PKHosting VPS assessment demo not live checkout.</p>
-  </footer>
+          <article data-plan="growth" data-monthly-pkr="4800">
+            <p>Most popular</p>
+            <h3>Growth</h3>
+            <p>Production sites and APIs</p>
+            <p>
+              <span data-role="amount">Rs&nbsp;4,800</span>
+              <span data-role="period">/month</span>
+            </p>
+            <p data-role="meta" hidden></p>
+            <p data-role="savings" hidden></p>
+            <ul>
+              <li>2 vCPU</li>
+              <li>4 GB RAM</li>
+              <li>80 GB NVMe</li>
+              <li>4 TB transfer</li>
+            </ul>
+            <a href="#footer">Order Growth</a>
+          </article>
 
-</body>
+          <article data-plan="scale" data-monthly-pkr="9600">
+            <h3>Scale</h3>
+            <p>Busier stores and SaaS</p>
+            <p>
+              <span data-role="amount">Rs&nbsp;9,600</span>
+              <span data-role="period">/month</span>
+            </p>
+            <p data-role="meta" hidden></p>
+            <p data-role="savings" hidden></p>
+            <ul>
+              <li>4 vCPU</li>
+              <li>8 GB RAM</li>
+              <li>160 GB NVMe</li>
+              <li>8 TB transfer</li>
+            </ul>
+            <a href="#footer">Order Scale</a>
+          </article>
+
+          <article data-plan="dedicated-core" data-monthly-pkr="19500">
+            <h3>Dedicated Core</h3>
+            <p>Pinned cores for heavy loads</p>
+            <p>
+              <span data-role="amount">Rs&nbsp;19,500</span>
+              <span data-role="period">/month</span>
+            </p>
+            <p data-role="meta" hidden></p>
+            <p data-role="savings" hidden></p>
+            <ul>
+              <li>6 vCPU (pinned)</li>
+              <li>16 GB RAM</li>
+              <li>320 GB NVMe</li>
+              <li>12 TB transfer</li>
+            </ul>
+            <a href="#footer">Order Dedicated Core</a>
+          </article>
+        </div>
+
+        <p>
+          Annual billing charges 10 months for 12. Demo rates: 1 USD = 278.50
+          PKR · 1 GBP = 355.00 PKR.
+        </p>
+      </section>
+
+      <section id="compare" aria-labelledby="compare-title">
+        <h2 id="compare-title">Compare VPS plans</h2>
+        <p>Full comparison table</p>
+      </section>
+
+      <section id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Frequently asked questions</h2>
+        <p>FAQ items</p>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <h2>Payment methods</h2>
+      <p>Payment list</p>
+      <p>PKHosting VPS assessment demo not live checkout.</p>
+    </footer>
+  </body>
 </html>
