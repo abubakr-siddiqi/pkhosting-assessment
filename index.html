@@ -243,14 +243,78 @@
 
       <section id="faq" aria-labelledby="faq-title">
         <h2 id="faq-title">Frequently asked questions</h2>
-        <p>FAQ items</p>
+        <p>Practical answers before you pick a tier.</p>
+
+        <details>
+          <summary>What does “10 months for 12” mean on annual billing?</summary>
+          <p>
+            You pay the equivalent of ten monthly charges up front and keep the
+            server for twelve months. The per-month figure on annual cards is
+            that total divided by twelve for Growth,
+            Rs&nbsp;4,800 × 10 ÷ 12 = Rs&nbsp;4,000/mo.
+          </p>
+        </details>
+
+        <details>
+          <summary>Do I get root access on every plan?</summary>
+          <p>
+            Yes. Every VPS includes full root or Administrator access over SSH
+            or RDP where licensed. You choose the OS at order time.
+          </p>
+        </details>
+
+        <details>
+          <summary>Can I pay in PKR with JazzCash or EasyPaisa?</summary>
+          <p>
+            Yes for PKR invoices. Card payments cover PKR, USD and GBP.
+            PayPal is available on USD and GBP invoices. Bank transfer works
+            for PKR (and USD on request).
+          </p>
+        </details>
+
+        <details>
+          <summary>Is this live PKHosting checkout?</summary>
+          <p>
+            No. This page is an assessment demo with invented VPS prices.
+            It opens offline from index.html and does not call billing APIs.
+          </p>
+        </details>
+
+        <details>
+          <summary>How do currency and billing choices persist?</summary>
+          <p>
+            When JavaScript is available, billing period and currency are stored
+            in localStorage and restored after a reload. Without JavaScript,
+            monthly PKR prices remain visible in the page source.
+          </p>
+        </details>
       </section>
     </main>
 
     <footer id="footer">
+      <p><strong>PKHosting</strong></p>
+      <p>Demo VPS pricing page for assessment. Not a live product page.</p>
+
       <h2>Payment methods</h2>
-      <p>Payment list</p>
-      <p>PKHosting VPS assessment demo not live checkout.</p>
+      <p>
+        Six methods for a Pakistani VPS buyer. Text labels only no hotlinked logos.
+      </p>
+      <ul>
+        <li><strong>JazzCash</strong> PKR wallets, high local adoption</li>
+        <li><strong>EasyPaisa</strong> PKR wallets and agent network</li>
+        <li><strong>Bank transfer</strong> PKR (USD on request)</li>
+        <li><strong>Visa</strong> cards via Stripe-style checkout</li>
+        <li><strong>Mastercard</strong> cards via Stripe-style checkout</li>
+        <li><strong>PayPal</strong> USD / GBP invoices only</li>
+      </ul>
+      <p>
+        Cut from a typical eight-method list: office cash deposit (poor fit for
+        remote VPS) and cheque / money order (slow reconciliation).
+      </p>
+      <p>
+        © PKHosting assessment demo. Invented prices. Opens offline with no
+        external requests.
+      </p>
     </footer>
   </body>
 </html>
