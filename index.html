@@ -3,10 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="PKHosting VPS Hosting assessment demo pricing page with monthly and annual plans."
+    />
     <link rel="stylesheet" href="css/styles.css" />
     <title>PKHosting VPS Hosting</title>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <header class="site-header">
       <p><strong>PKHosting</strong></p>
       <nav aria-label="Primary">
@@ -62,7 +68,12 @@
           </div>
         </div>
 
-        <p id="price-live" aria-live="polite" aria-atomic="true"></p>
+        <p
+          class="sr-only"
+          id="price-live"
+          aria-live="polite"
+          aria-atomic="true"
+        ></p>
 
         <div class="card-grid">
           <article
@@ -171,7 +182,7 @@
           aria-labelledby="compare-title"
         >
           <table>
-            <caption>
+            <caption class="sr-only">
               VPS plan comparison across ten specifications
             </caption>
             <thead>
