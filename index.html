@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>PKHosting VPS Hosting</title>
   </head>
   <body>
-    <header>
+    <header class="site-header">
       <p><strong>PKHosting</strong></p>
       <nav aria-label="Primary">
         <a href="#plans">Plans</a>
@@ -17,15 +18,15 @@
     </header>
 
     <main id="main">
-      <section id="top" aria-labelledby="hero-title">
+      <section id="top" class="hero" aria-labelledby="hero-title">
         <p>PKHosting</p>
         <h1 id="hero-title">VPS Hosting</h1>
         <p>
           Root access and clear pricing for teams that outgrew shared hosting.
         </p>
         <p>
-          <a href="#plans">View VPS plans</a>
-          <a href="#compare">Compare specs</a>
+          <a class="btn btn-primary" href="#plans">View VPS plans</a>
+          <a class="btn btn-ghost" href="#compare">Compare specs</a>
         </p>
       </section>
 
@@ -63,8 +64,12 @@
 
         <p id="price-live" aria-live="polite" aria-atomic="true"></p>
 
-        <div>
-          <article data-plan="starter" data-monthly-pkr="2400">
+        <div class="card-grid">
+          <article
+            class="price-card"
+            data-plan="starter"
+            data-monthly-pkr="2400"
+          >
             <h3>Starter</h3>
             <p>Small apps and staging sites</p>
             <p>
@@ -79,11 +84,15 @@
               <li>40 GB NVMe</li>
               <li>2 TB transfer</li>
             </ul>
-            <a href="#footer">Order Starter</a>
+            <a class="btn btn-secondary" href="#footer">Order Starter</a>
           </article>
 
-          <article data-plan="growth" data-monthly-pkr="4800">
-            <p>Most popular</p>
+          <article
+            class="price-card is-popular"
+            data-plan="growth"
+            data-monthly-pkr="4800"
+          >
+            <p class="popular-badge">Most popular</p>
             <h3>Growth</h3>
             <p>Production sites and APIs</p>
             <p>
@@ -98,10 +107,10 @@
               <li>80 GB NVMe</li>
               <li>4 TB transfer</li>
             </ul>
-            <a href="#footer">Order Growth</a>
+            <a class="btn btn-secondary" href="#footer">Order Growth</a>
           </article>
 
-          <article data-plan="scale" data-monthly-pkr="9600">
+          <article class="price-card" data-plan="scale" data-monthly-pkr="9600">
             <h3>Scale</h3>
             <p>Busier stores and SaaS</p>
             <p>
@@ -116,10 +125,14 @@
               <li>160 GB NVMe</li>
               <li>8 TB transfer</li>
             </ul>
-            <a href="#footer">Order Scale</a>
+            <a class="btn btn-secondary" href="#footer">Order Scale</a>
           </article>
 
-          <article data-plan="dedicated-core" data-monthly-pkr="19500">
+          <article
+            class="price-card"
+            data-plan="dedicated-core"
+            data-monthly-pkr="19500"
+          >
             <h3>Dedicated Core</h3>
             <p>Pinned cores for heavy loads</p>
             <p>
@@ -134,7 +147,7 @@
               <li>320 GB NVMe</li>
               <li>12 TB transfer</li>
             </ul>
-            <a href="#footer">Order Dedicated Core</a>
+            <a class="btn btn-secondary" href="#footer">Order Dedicated Core</a>
           </article>
         </div>
 
@@ -151,7 +164,12 @@
           its box later.
         </p>
 
-        <div tabindex="0" role="region" aria-labelledby="compare-title">
+        <div
+          class="table-scroll"
+          tabindex="0"
+          role="region"
+          aria-labelledby="compare-title"
+        >
           <table>
             <caption>
               VPS plan comparison across ten specifications
@@ -246,12 +264,14 @@
         <p>Practical answers before you pick a tier.</p>
 
         <details>
-          <summary>What does “10 months for 12” mean on annual billing?</summary>
+          <summary>
+            What does “10 months for 12” mean on annual billing?
+          </summary>
           <p>
             You pay the equivalent of ten monthly charges up front and keep the
             server for twelve months. The per-month figure on annual cards is
-            that total divided by twelve for Growth,
-            Rs&nbsp;4,800 × 10 ÷ 12 = Rs&nbsp;4,000/mo.
+            that total divided by twelve for Growth, Rs&nbsp;4,800 × 10 ÷ 12 =
+            Rs&nbsp;4,000/mo.
           </p>
         </details>
 
@@ -266,17 +286,17 @@
         <details>
           <summary>Can I pay in PKR with JazzCash or EasyPaisa?</summary>
           <p>
-            Yes for PKR invoices. Card payments cover PKR, USD and GBP.
-            PayPal is available on USD and GBP invoices. Bank transfer works
-            for PKR (and USD on request).
+            Yes for PKR invoices. Card payments cover PKR, USD and GBP. PayPal
+            is available on USD and GBP invoices. Bank transfer works for PKR
+            (and USD on request).
           </p>
         </details>
 
         <details>
           <summary>Is this live PKHosting checkout?</summary>
           <p>
-            No. This page is an assessment demo with invented VPS prices.
-            It opens offline from index.html and does not call billing APIs.
+            No. This page is an assessment demo with invented VPS prices. It
+            opens offline from index.html and does not call billing APIs.
           </p>
         </details>
 
@@ -297,7 +317,8 @@
 
       <h2>Payment methods</h2>
       <p>
-        Six methods for a Pakistani VPS buyer. Text labels only no hotlinked logos.
+        Six methods for a Pakistani VPS buyer. Text labels only no hotlinked
+        logos.
       </p>
       <ul>
         <li><strong>JazzCash</strong> PKR wallets, high local adoption</li>

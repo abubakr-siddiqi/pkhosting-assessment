@@ -1,0 +1,322 @@
+:root {
+  --ink: #0c1b2a;
+  --muted: #4a5d70;
+  --line: #d5dde6;
+  --paper: #f3f6f9;
+  --surface: #ffffff;
+  --brand: #0e7c6b;
+  --brand-deep: #0a5c50;
+  --accent: #9a3f12;
+  --focus: #1a6fd4;
+  --font-display: Georgia, "Palatino Linotype", Palatino, serif;
+  --font-body: "Segoe UI", Candara, Calibri, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--paper);
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--brand-deep);
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: rgba(243, 246, 249, 0.95);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+}
+
+.site-header a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.hero {
+  padding: 3.5rem 1.25rem 4rem;
+  color: #f5f8fb;
+  background:
+    radial-gradient(
+      ellipse 70% 50% at 70% 20%,
+      rgba(14, 124, 107, 0.4),
+      transparent 55%
+    ),
+    linear-gradient(165deg, #07131f 0%, #0c1b2a 45%, #123347 100%);
+}
+
+.hero p:first-child {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #8fd9cc;
+}
+
+.hero h1 {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
+  line-height: 1.1;
+}
+
+.hero > p:nth-of-type(2) {
+  max-width: 32rem;
+  color: #d5e0ea;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.6rem 1.1rem;
+  margin: 0.25rem 0.35rem 0.25rem 0;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--brand-deep);
+  border-color: var(--line);
+}
+
+**Block C — plans + cards** #plans,
+#compare,
+#faq {
+  padding: 3rem 1.25rem;
+}
+
+#plans {
+  background: var(--surface);
+}
+
+#plans h2,
+#compare h2,
+#faq h2,
+footer h2 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+#plans [role="group"] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 2rem;
+  margin: 1.5rem 0 2rem;
+  padding: 1.25rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.price-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 24rem;
+  padding: 1.25rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.price-card.is-popular {
+  background: #e6f4f1;
+  border-color: var(--brand);
+}
+
+.popular-badge {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0.25rem 0.6rem;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.price-card h3 {
+  margin: 0.5rem 0 0;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+}
+
+.price-card [data-role="amount"] {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.price-card [data-role="meta"],
+.price-card [data-role="savings"] {
+  min-height: 1.35rem;
+  margin: 0;
+}
+
+.price-card [data-role="savings"]:not([hidden]) {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 0.2rem 0.5rem;
+  background: #fdf0e8;
+  color: #8a3d12;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 3px;
+}
+
+.price-card ul {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.2rem;
+  flex: 1;
+  color: var(--muted);
+}
+
+.price-card .btn {
+  margin-top: auto;
+  width: 100%;
+}
+
+#compare {
+  background: var(--paper);
+}
+
+.table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+}
+
+table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+th,
+td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+thead th {
+  background: var(--ink);
+  color: #f5f8fb;
+}
+
+tbody th {
+  background: #f8fafc;
+}
+
+#faq {
+  background: var(--surface);
+}
+
+#faq details {
+  margin: 0.75rem 0;
+  padding: 0 1rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+}
+
+#faq summary {
+  cursor: pointer;
+  padding: 1rem 0;
+  font-weight: 700;
+}
+
+footer {
+  padding: 3rem 1.25rem 2rem;
+  background: var(--ink);
+  color: #d5e0ea;
+}
+
+footer a {
+  color: #8fd9cc;
+}
+
+footer ul {
+  padding-left: 1.2rem;
+}
+
+footer li {
+  margin: 0.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
