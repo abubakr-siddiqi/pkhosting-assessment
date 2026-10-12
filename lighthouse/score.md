@@ -1,0 +1,8 @@
+| Category | Score |
+| --- | ---: |
+| Performance | 100 |
+| Accessibility | 100 |
+| Best Practices | 100 |
+| SEO | 100 |
+
+Full interactive report: [report.html](./report.html)
